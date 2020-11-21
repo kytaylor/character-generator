@@ -1,13 +1,26 @@
+// Getting divs from HTML
+var rollOne = document.querySelector(".roll1");
+var rollTwo = document.querySelector(".roll2");
+var rollThree = document.querySelector(".roll3");
+var rollFour = document.querySelector(".roll4")
+var firstStat = document.querySelector(".finalStat1");
+var modOne = document.querySelector(".finalStatMod1");
+
+// Function for determining stats
 function statOne() {
     // Rolls four six-sided dice
     var diceOne = Math.floor(Math.random() * 6) + 1;
     console.log(diceOne)
+    rollOne.textContent = diceOne;
     var diceTwo = Math.floor(Math.random() * 6) + 1;
     console.log(diceTwo)
+    rollTwo.textContent = diceTwo;
     var diceThree = Math.floor(Math.random() * 6) + 1;
     console.log(diceThree)
+    rollThree.textContent = diceThree;
     var diceFour = Math.floor(Math.random() * 6) + 1;
     console.log(diceFour)
+    rollFour.textContent = diceFour;
 
     // Adds the three highest dice values to an array
     var values = [];
@@ -41,6 +54,7 @@ function statOne() {
 
     var finalStatOne = valOne + valTwo + valThree;
     console.log(finalStatOne)
+    firstStat.textContent = finalStatOne;
 
     // Determines stat modifier based on final stat
     if (finalStatOne === 2 || finalStatOne === 3) {
@@ -76,6 +90,11 @@ function statOne() {
     }
     console.log(modifierOne)
     console.log(modifierOneNum)
+
+    // Turns modifier into one string
+    var finalMod = modifierOne + modifierOneNum;
+    console.log(finalMod)
+    modOne.textContent = finalMod;
 }
 
 statOne()
