@@ -41,6 +41,41 @@ function statOne() {
 
     var finalStatOne = valOne + valTwo + valThree;
     console.log(finalStatOne)
+
+    // Determines stat modifier based on final stat
+    if (finalStatOne === 2 || finalStatOne === 3) {
+        var modifierOne = "-";
+        var modifierOneNum = 4;
+    } else if (finalStatOne === 4 || finalStatOne === 5) {
+        var modifierOne = "-";
+        var modifierOneNum = 3;
+    } else if (finalStatOne === 6 || finalStatOne === 7) {
+        var modifierOne = "-";
+        var modifierOneNum = 2;
+    } else if (finalStatOne === 8 || finalStatOne === 9) {
+        var modifierOne = "-";
+        var modifierOneNum = 1;
+    } else if (finalStatOne === 10 || finalStatOne === 11) {
+        var modifierOne = "+";
+        var modifierOneNum = 0;
+    } else if (finalStatOne === 12 || finalStatOne === 13) {
+        var modifierOne = "+";
+        var modifierOneNum = 1;
+    } else if (finalStatOne === 14 || finalStatOne === 15) {
+        var modifierOne = "+";
+        var modifierOneNum = 2;
+    } else if (finalStatOne === 16 || finalStatOne === 17) {
+        var modifierOne = "+";
+        var modifierOneNum = 3;
+    } else if (finalStatOne === 18 || finalStatOne === 19) {
+        var modifierOne = "+";
+        var modifierOneNum = 4;
+    } else if (finalStatOne === 20) {
+        var modifierOne = "+";
+        var modifierOneNum = 5;
+    }
+    console.log(modifierOne)
+    console.log(modifierOneNum)
 }
 
 statOne()
