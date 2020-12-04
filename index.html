@@ -3,25 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Generator
-    <link rel="stylesheet" href="style.css"/>
-    </title>
+    <title>Character Generator</title>
+    <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
     <h1>Chracter Generator</h1>
 
-    <h2>Roll 1</h2>
-    <div class="roll1" id="statBlock"></div>
-    <h2>Roll 2</h2>
-    <div class="roll2" id="statBlock"></div>
-    <h2>Roll 3</h2>
-    <div class="roll3" id="statBlock"></div>
-    <h2>Roll 4</h2>
-    <div class="roll4" id="statBlock"></div>
-    <h2>Final stat</h2>
-    <div class="finalStat1" id="statBlock"></div>
-    <h2>Stat modifier</h2>
-    <div class="finalStatMod1" id="statBlock"></div>
+    <div class="rolls">
+        <div class="block">
+            <h2>Roll 1</h2>
+            <div class="roll1" id="statBlock"></div>
+        </div>
+
+        <div class="block">
+            <h2>Roll 2</h2>
+            <div class="roll2" id="statBlock"></div>
+        </div>
+
+        <div class="block">
+            <h2>Roll 3</h2>
+            <div class="roll3" id="statBlock"></div>
+        </div>
+
+        <div class="block">
+            <h2>Roll 4</h2>
+            <div class="roll4" id="statBlock"></div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Final stat</h2>
+        <div class="finalStat1" id="statBlock"></div>
+    </div>
+    <div class="block">
+        <h2>Stat modifier</h2>
+        <div class="finalStatMod1" id="statBlock"></div>
+    </div>
     
     <script src="script.js"></script>
 </body>
