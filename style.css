@@ -17,7 +17,14 @@ h1 {
     padding: 5px;
     border: 5px solid black;
     width: 45px;
+    height: 43px;
     text-align: center;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .block {
@@ -28,4 +35,30 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-between; */
+}
+
+.rolled-stats {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button {
+    border: 5px solid rgba(131,58,180,1);
+    color: white;
+    background-color: rgba(131,58,180,1);
+    margin: 4px 2px 4px 15px;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    border: 5px solid rgba(131,58,180,1);
+    color: rgba(131,58,180,1);
+    background-color: white;
 }

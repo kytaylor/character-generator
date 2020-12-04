@@ -2,9 +2,20 @@
 var rollOne = document.querySelector(".roll1");
 var rollTwo = document.querySelector(".roll2");
 var rollThree = document.querySelector(".roll3");
-var rollFour = document.querySelector(".roll4")
+var rollFour = document.querySelector(".roll4");
+
 var firstStat = document.querySelector(".finalStat1");
 var modOne = document.querySelector(".finalStatMod1");
+
+// Buttons to roll each stat
+var rollButton1 = document.querySelector(".r1-button");
+var rollButton2 = document.querySelector(".r2-button");
+var rollButton3 = document.querySelector(".r3-button");
+var rollButton4 = document.querySelector(".r4-button");
+var rollButton5 = document.querySelector(".r5-button");
+var rollButton6 = document.querySelector(".r6-button");
+
+rollButton1.addEventListener("click", statOne);
 
 // Function for determining stats
 function statOne() {
@@ -96,5 +107,3 @@ function statOne() {
     console.log(finalMod)
     modOne.textContent = finalMod;
 }
-
-statOne()
