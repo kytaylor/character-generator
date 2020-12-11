@@ -1,15 +1,22 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
-h1 {
+header {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
     background-color: rgba(131,58,180,1);
     color: white;
     border-left: 5px solid rgb(201, 127, 250);
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    padding-top: 10px;
 }
 
 #statBlock {
@@ -19,6 +26,7 @@ h1 {
     width: 45px;
     height: 43px;
     text-align: center;
+    margin-bottom: 5px ;
 }
 
 .stats {
@@ -34,12 +42,33 @@ h1 {
 .rolls {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
 }
 
 .rolled-stats {
     display: flex;
     flex-wrap: wrap;
+}
+
+.link-button {
+    border: 5px solid white;
+    color: rgba(131,58,180,1);
+    background-color: white;
+    margin: 4px 15px 4px 15px;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    float: right;
+}
+
+.link-button:hover {
+    border: 5px solid white;
+    color: white;
+    background-color: rgba(131,58,180,1);
 }
 
 .button {
@@ -50,7 +79,7 @@ h1 {
     padding: 10px 27px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -61,4 +90,21 @@ h1 {
     border: 5px solid rgba(131,58,180,1);
     color: rgba(131,58,180,1);
     background-color: white;
+}
+
+p {
+    margin-left: 15px;
+}
+
+h2 {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+ul {
+    margin-left: 15px;
+}
+
+li {
+    margin-left: 15px;
 }

@@ -1,4 +1,24 @@
 // Getting divs from HTML
+var strStat = document.querySelector(".str")
+var strMod = document.querySelector(".str-mod")
+
+var dexStat = document.querySelector(".dex")
+var dexMod = document.querySelector(".dex-mod")
+
+var conStat = document.querySelector(".con")
+var conMod = document.querySelector(".con-mod")
+
+var intStat = document.querySelector(".int")
+var intMod = document.querySelector(".int-mod")
+
+var wisStat = document.querySelector(".wis")
+var wisMod = document.querySelector(".wis-mod")
+
+var chaStat = document.querySelector(".cha")
+var chaMod = document.querySelector(".cha-mod")
+
+
+
 var rollOne = document.querySelector(".roll1");
 var rollTwo = document.querySelector(".roll2");
 var rollThree = document.querySelector(".roll3");
@@ -30,7 +50,6 @@ var rollButton4 = document.querySelector(".r4-button");
 var rollButton5 = document.querySelector(".r5-button");
 var rollButton6 = document.querySelector(".r6-button");
 
-
 // Button event listeners
 rollButton1.addEventListener("click", statOne);
 rollButton2.addEventListener("click", statTwo);
@@ -38,6 +57,24 @@ rollButton3.addEventListener("click", statThree);
 rollButton4.addEventListener("click", statFour);
 rollButton5.addEventListener("click", statFive);
 rollButton6.addEventListener("click", statSix);
+
+// -------------------------------
+
+// Buttons for assigning stats
+var strButton = document.querySelector(".str-button");
+var dexButton = document.querySelector(".dex-button");
+var conButton = document.querySelector(".con-button");
+var intButton = document.querySelector(".int-button");
+var wisButton = document.querySelector(".wis-button");
+var chaButton = document.querySelector(".cha-button");
+
+// Button event listeners
+strButton.addEventListener("click", assignStr);
+dexButton.addEventListener("click", assignDex);
+conButton.addEventListener("click", assignCon);
+intButton.addEventListener("click", assignInt);
+wisButton.addEventListener("click", assignWis);
+chaButton.addEventListener("click", assignCha);
 
 // Function for determining stats
 // function statOne() {
@@ -276,3 +313,33 @@ function statSix() {
     sixthStat.textContent = finalStatOne;
     modSix.textContent = finalMod;
 }
+
+// ----------------------------------------------
+
+// Functions for assigning rolled stats to stats
+function assignStr() {
+    strStat.textContent = firstStat.textContent;
+    strMod.textContent = modOne.textContent;
+}
+function assignDex() {
+    dexStat.textContent = firstStat.textContent;
+    dexMod.textContent = modOne.textContent;
+}
+function assignCon() {
+    conStat.textContent = firstStat.textContent;
+    conMod.textContent = modOne.textContent;
+}
+function assignInt() {
+    intStat.textContent = firstStat.textContent;
+    intMod.textContent = modOne.textContent;
+}
+function assignWis() {
+    wisStat.textContent = firstStat.textContent;
+    wisMod.textContent = modOne.textContent;
+}
+function assignCha() {
+    chaStat.textContent = firstStat.textContent;
+    chaMod.textContent = modOne.textContent;
+}
+
+// Next: can only assign each rolled stat to one final stat, cannot assign a stat over another, goes through picking stat locations one at a time
