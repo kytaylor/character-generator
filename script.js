@@ -272,6 +272,8 @@ function statOne() {
 
     firstStat.textContent = finalStatOne;
     modOne.textContent = finalMod;
+
+    rollButton1.style.display = "none";
 }
 
 function statTwo() {
@@ -280,6 +282,8 @@ function statTwo() {
 
     secondStat.textContent = finalStatOne;
     modTwo.textContent = finalMod;
+
+    rollButton2.style.display = "none";
 }
 
 function statThree() {
@@ -288,6 +292,8 @@ function statThree() {
 
     thirdStat.textContent = finalStatOne;
     modThree.textContent = finalMod;
+
+    rollButton3.style.display = "none";
 }
 
 function statFour() {
@@ -296,6 +302,8 @@ function statFour() {
 
     fourthStat.textContent = finalStatOne;
     modFour.textContent = finalMod;
+
+    rollButton4.style.display = "none";
 }
 
 function statFive() {
@@ -304,6 +312,8 @@ function statFive() {
 
     fifthStat.textContent = finalStatOne;
     modFive.textContent = finalMod;
+
+    rollButton5.style.display = "none";
 }
 
 function statSix() {
@@ -312,6 +322,8 @@ function statSix() {
 
     sixthStat.textContent = finalStatOne;
     modSix.textContent = finalMod;
+
+    rollButton6.style.display = "none";
 }
 
 // ----------------------------------------------
