@@ -92,6 +92,10 @@ h1 {
     background-color: white;
 }
 
+.assign-stat-text {
+    margin-left: 15px;
+}
+
 p {
     margin-left: 15px;
 }

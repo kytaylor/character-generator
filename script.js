@@ -68,13 +68,15 @@ var intButton = document.querySelector(".int-button");
 var wisButton = document.querySelector(".wis-button");
 var chaButton = document.querySelector(".cha-button");
 
-// // Button event listeners
-// strButton.addEventListener("click", assignStr);
-// dexButton.addEventListener("click", assignDex);
-// conButton.addEventListener("click", assignCon);
-// intButton.addEventListener("click", assignInt);
-// wisButton.addEventListener("click", assignWis);
-// chaButton.addEventListener("click", assignCha);
+// Hiding necessary elements
+document.querySelector(".assignment-buttons").style.display = "none";
+
+document.querySelector("#assign-stat-text-1").hidden = true;
+document.querySelector("#assign-stat-text-2").hidden = true;
+document.querySelector("#assign-stat-text-3").hidden = true;
+document.querySelector("#assign-stat-text-4").hidden = true;
+document.querySelector("#assign-stat-text-5").hidden = true;
+document.querySelector("#assign-stat-text-6").hidden = true;
 
 // ----------------------------------------------
 
@@ -182,6 +184,8 @@ function statOne() {
     modOne.textContent = finalMod;
 
     rollButton1.style.display = "none";
+    counter++
+    counterCheck()
 }
 
 function statTwo() {
@@ -192,6 +196,8 @@ function statTwo() {
     modTwo.textContent = finalMod;
 
     rollButton2.style.display = "none";
+    counter++
+    counterCheck()
 }
 
 function statThree() {
@@ -202,6 +208,8 @@ function statThree() {
     modThree.textContent = finalMod;
 
     rollButton3.style.display = "none";
+    counter++
+    counterCheck()
 }
 
 function statFour() {
@@ -212,6 +220,8 @@ function statFour() {
     modFour.textContent = finalMod;
 
     rollButton4.style.display = "none";
+    counter++
+    counterCheck()
 }
 
 function statFive() {
@@ -222,6 +232,8 @@ function statFive() {
     modFive.textContent = finalMod;
 
     rollButton5.style.display = "none";
+    counter++
+    counterCheck()
 }
 
 function statSix() {
@@ -232,11 +244,49 @@ function statSix() {
     modSix.textContent = finalMod;
 
     rollButton6.style.display = "none";
+    counter++
+    counterCheck()
+}
+
+function counterCheck() {
+    if (counter === -1) {
+        rollOne.style.display = "none";
+        rollTwo.style.display = "none";
+        rollThree.style.display = "none";
+        rollFour.style.display = "none";
+        document.querySelector(".rolls").style.display = "none";
+
+        document.querySelector(".assignment-buttons").style.display = "flex";
+    }
+
+    if (counter === -1) {
+        document.querySelector("#assign-stat-text-1").hidden = false;
+        document.querySelector(".assign-stat-span").textContent = "1";
+    }
+    if (counter === 0) {
+        document.querySelector(".assign-stat-span").textContent = "2";
+    }
+    if (counter === 1) {
+        document.querySelector(".assign-stat-span").textContent = "3";
+    }
+    if (counter === 2) {
+        document.querySelector(".assign-stat-span").textContent = "4";
+    }
+    if (counter === 3) {
+        document.querySelector(".assign-stat-span").textContent = "5";
+    }
+    if (counter === 4) {
+        document.querySelector(".assign-stat-span").textContent = "6";
+    }
+    if (counter === 5) {
+        document.querySelector("#assign-stat-text-1").hidden = true;
+        document.querySelector(".rolled-stats").style.display = "none";
+    }
 }
 
 // -----------------------------------------------------
 
-var counter = -1;
+var counter = -7;
 console.log(counter)
 
 // ------------------------------------------------------
@@ -247,6 +297,7 @@ strButton.addEventListener("click", strButtonFunction);
 
 function strButtonFunction() {
     counter++
+    counterCheck()
 
     if (counter === 0) {
         var statAssign = firstStat.textContent;
@@ -282,6 +333,7 @@ dexButton.addEventListener("click", dexButtonFunction);
 
 function dexButtonFunction() {
     counter++
+    counterCheck()
 
     if (counter === 0) {
         var statAssign = firstStat.textContent;
@@ -315,6 +367,7 @@ conButton.addEventListener("click", conButtonFunction);
 
 function conButtonFunction() {
     counter++
+    counterCheck()
 
     if (counter === 0) {
         var statAssign = firstStat.textContent;
@@ -348,6 +401,7 @@ intButton.addEventListener("click", intButtonFunction);
 
 function intButtonFunction() {
     counter++
+    counterCheck()
 
     if (counter === 0) {
         var statAssign = firstStat.textContent;
@@ -381,6 +435,7 @@ wisButton.addEventListener("click", wisButtonFunction);
 
 function wisButtonFunction() {
     counter++
+    counterCheck()
 
     if (counter === 0) {
         var statAssign = firstStat.textContent;
@@ -414,6 +469,7 @@ chaButton.addEventListener("click", chaButtonFunction);
 
 function chaButtonFunction() {
     counter++
+    counterCheck()
 
     if (counter === 0) {
         var statAssign = firstStat.textContent;
