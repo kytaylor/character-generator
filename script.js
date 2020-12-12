@@ -72,11 +72,6 @@ var chaButton = document.querySelector(".cha-button");
 document.querySelector(".assignment-buttons").style.display = "none";
 
 document.querySelector("#assign-stat-text-1").hidden = true;
-document.querySelector("#assign-stat-text-2").hidden = true;
-document.querySelector("#assign-stat-text-3").hidden = true;
-document.querySelector("#assign-stat-text-4").hidden = true;
-document.querySelector("#assign-stat-text-5").hidden = true;
-document.querySelector("#assign-stat-text-6").hidden = true;
 
 // ----------------------------------------------
 
@@ -283,6 +278,25 @@ function counterCheck() {
     if (counter === 5) {
         document.querySelector("#assign-stat-text-1").hidden = true;
         document.querySelector(".rolled-stats").style.display = "none";
+
+        // // Adds stats to local storage
+        // localStorage.setItem("strength-stat", strStat.textContent)
+        // localStorage.setItem("strength-modifier", strMod.textContent)
+
+        // localStorage.setItem("dexterity-stat", dexStat.textContent)
+        // localStorage.setItem("dexterity-modifier", dexMod.textContent)
+
+        // localStorage.setItem("constitution-stat", conStat.textContent)
+        // localStorage.setItem("constitution-modifier", conMod.textContent)
+
+        // localStorage.setItem("intelligence-stat", intStat.textContent)
+        // localStorage.setItem("intelligence-modifier", intMod.textContent)
+
+        // localStorage.setItem("wisdom-stat", wisStat.textContent)
+        // localStorage.setItem("wisdom-modifier", wisMod.textContent)
+
+        // localStorage.setItem("charisma-stat", chaStat.textContent)
+        // localStorage.setItem("charisma-modifier", chaMod.textContent)
     }
 }
 
@@ -507,24 +521,42 @@ function chaButtonFunction() {
 function assignStr(x, y) {
     strStat.textContent = x;
     strMod.textContent = y;
+
+    localStorage.setItem("strength-stat", strStat.textContent)
+    localStorage.setItem("strength-modifier", strMod.textContent)
 }
 function assignDex(x, y) {
     dexStat.textContent = x;
     dexMod.textContent = y;
+
+    localStorage.setItem("dexterity-stat", dexStat.textContent)
+    localStorage.setItem("dexterity-modifier", dexMod.textContent)
 }
 function assignCon(x, y) {
     conStat.textContent = x;
     conMod.textContent = y;
+
+    localStorage.setItem("constitution-stat", conStat.textContent)
+    localStorage.setItem("constitution-modifier", conMod.textContent)
 }
 function assignInt(x, y) {
     intStat.textContent = x;
     intMod.textContent = y;
+
+    localStorage.setItem("intelligence-stat", intStat.textContent)
+    localStorage.setItem("intelligence-modifier", intMod.textContent)
 }
 function assignWis(x, y) {
     wisStat.textContent = x;
     wisMod.textContent = y;
+
+    localStorage.setItem("wisdom-stat", wisStat.textContent)
+    localStorage.setItem("wisdom-modifier", wisMod.textContent)
 }
 function assignCha(x, y) {
     chaStat.textContent = x;
     chaMod.textContent = y;
+
+    localStorage.setItem("charisma-stat", chaStat.textContent)
+    localStorage.setItem("charisma-modifier", chaMod.textContent)
 }
