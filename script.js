@@ -248,6 +248,8 @@ function statSix() {
     counterCheck()
 }
 
+
+// Checks the value the counter is at, does necessary changes at certain counter values
 function counterCheck() {
     if (counter === -1) {
         rollOne.style.display = "none";
