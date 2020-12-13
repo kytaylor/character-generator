@@ -73,6 +73,10 @@ document.querySelector(".assignment-buttons").style.display = "none";
 
 document.querySelector("#assign-stat-text-1").hidden = true;
 
+document.querySelector(".race-selection").style.display = "none";
+document.querySelector(".half-elf-assignment-buttons1").style.display = "none";
+document.querySelector(".half-elf-assignment-buttons2").style.display = "none";
+
 // ----------------------------------------------
 
 // Function that rolls each stat
@@ -279,24 +283,7 @@ function counterCheck() {
         document.querySelector("#assign-stat-text-1").hidden = true;
         document.querySelector(".rolled-stats").style.display = "none";
 
-        // // Adds stats to local storage
-        // localStorage.setItem("strength-stat", strStat.textContent)
-        // localStorage.setItem("strength-modifier", strMod.textContent)
-
-        // localStorage.setItem("dexterity-stat", dexStat.textContent)
-        // localStorage.setItem("dexterity-modifier", dexMod.textContent)
-
-        // localStorage.setItem("constitution-stat", conStat.textContent)
-        // localStorage.setItem("constitution-modifier", conMod.textContent)
-
-        // localStorage.setItem("intelligence-stat", intStat.textContent)
-        // localStorage.setItem("intelligence-modifier", intMod.textContent)
-
-        // localStorage.setItem("wisdom-stat", wisStat.textContent)
-        // localStorage.setItem("wisdom-modifier", wisMod.textContent)
-
-        // localStorage.setItem("charisma-stat", chaStat.textContent)
-        // localStorage.setItem("charisma-modifier", chaMod.textContent)
+        document.querySelector(".race-selection").style.display = "block";
     }
 }
 
@@ -556,6 +543,166 @@ function assignWis(x, y) {
 function assignCha(x, y) {
     chaStat.textContent = x;
     chaMod.textContent = y;
+
+    localStorage.setItem("charisma-stat", chaStat.textContent)
+    localStorage.setItem("charisma-modifier", chaMod.textContent)
+}
+
+// ---------------------------------------------------------
+
+// ---------------------------------------------------------
+
+// Race buttons and bonuses
+document.getElementById("dragonborn-button").addEventListener("click", function() {
+    chaStat.textContent = parseInt(chaStat.textContent) + 1;
+    var modX = parseInt(chaStat.textContent);
+    chaMod.textContent = modifier(modX)
+
+    strStat.textContent = parseInt(strStat.textContent) + 2;
+    var modY = parseInt(strStat.textContent);
+    strMod.textContent = modifier(modY)
+
+    localStorage.setItem("race", "dragonborn")
+    statFinish()
+});
+
+document.getElementById("dwarf-button").addEventListener("click", function() {
+    conStat.textContent = parseInt(conStat.textContent) + 2;
+    var modX = parseInt(conStat.textContent);
+    conMod.textContent = modifier(modX)
+
+    localStorage.setItem("race", "dwarf")
+    statFinish()
+});
+
+document.getElementById("elf-button").addEventListener("click", function() {
+    dexStat.textContent = parseInt(dexStat.textContent) + 2;
+    var modX = parseInt(dexStat.textContent);
+    dexMod.textContent = modifier(modX)
+
+    localStorage.setItem("race", "elf")
+    statFinish()
+});
+
+document.getElementById("gnome-button").addEventListener("click", function() {
+    intStat.textContent = parseInt(intStat.textContent) + 2;
+    var modX = parseInt(intStat.textContent);
+    intMod.textContent = modifier(modX)
+
+    localStorage.setItem("race", "gnome")
+    statFinish()
+});
+
+document.getElementById("half-elf-button").disabled = true;
+document.getElementById("half-elf-button").addEventListener("click", function() {
+    chaStat.textContent = parseInt(chaStat.textContent) + 2;
+    var modX = parseInt(chaStat.textContent);
+    chaMod.textContent = modifier(modX)
+
+    halfElfStats()
+    localStorage.setItem("race", "half-elf")
+    // FINISH ME LATER LOL
+});
+
+document.getElementById("halfling-button").addEventListener("click", function() {
+    dexStat.textContent = parseInt(dexStat.textContent) + 2;
+    var modX = parseInt(dexStat.textContent);
+    dexMod.textContent = modifier(modX)
+
+    localStorage.setItem("race", "halfling")
+    statFinish()
+});
+
+document.getElementById("half-orc-button").addEventListener("click", function() {
+    strStat.textContent = parseInt(strStat.textContent) + 2;
+    var modX = parseInt(strStat.textContent);
+    strMod.textContent = modifier(modX)
+
+    conStat.textContent = parseInt(conStat.textContent) + 1;
+    var modY = parseInt(conStat.textContent);
+    conMod.textContent = modifier(modY)
+
+    localStorage.setItem("race", "half-orc")
+    statFinish()
+});
+
+document.getElementById("human-button").addEventListener("click", function() {
+    strStat.textContent = parseInt(strStat.textContent) + 1;
+    var modX = parseInt(strStat.textContent);
+    strMod.textContent = modifier(modX)
+
+    dexStat.textContent = parseInt(dexStat.textContent) + 1;
+    var modX = parseInt(dexStat.textContent);
+    dexMod.textContent = modifier(modX)
+
+    conStat.textContent = parseInt(conStat.textContent) + 1;
+    var modX = parseInt(conStat.textContent);
+    conMod.textContent = modifier(modX)
+
+    intStat.textContent = parseInt(intStat.textContent) + 1;
+    var modX = parseInt(intStat.textContent);
+    intMod.textContent = modifier(modX)
+
+    wisStat.textContent = parseInt(wisStat.textContent) + 1;
+    var modX = parseInt(wisStat.textContent);
+    wisMod.textContent = modifier(modX)
+
+    chaStat.textContent = parseInt(chaStat.textContent) + 1;
+    var modX = parseInt(chaStat.textContent);
+    chaMod.textContent = modifier(modX)
+
+    localStorage.setItem("race", "human")
+    statFinish()
+});
+
+document.getElementById("tiefling-button").addEventListener("click", function() {
+    chaStat.textContent = parseInt(chaStat.textContent) + 2;
+    var modX = parseInt(chaStat.textContent);
+    chaMod.textContent = modifier(modX)
+
+    intStat.textContent = parseInt(intStat.textContent) + 1;
+    var modY = parseInt(intStat.textContent);
+    intMod.textContent = modifier(modY)
+
+    localStorage.setItem("race", "tiefling")
+    statFinish()
+});
+
+// function halfElfStats() {
+//     document.querySelector(".half-elf-assignment-buttons1").style.display = "flex";
+//     document.querySelector(".half-elf-assignment-buttons2").style.display = "flex";
+
+//     document.getElementById("tiefling-button").addEventListener("click", function() {
+//         chaStat.textContent = parseInt(chaStat.textContent) + 2;
+//         var modX = parseInt(chaStat.textContent);
+//         chaMod.textContent = modifier(modX)
+    
+//         intStat.textContent = parseInt(intStat.textContent) + 1;
+//         var modY = parseInt(intStat.textContent);
+//         intMod.textContent = modifier(modY)
+    
+//         localStorage.setItem("race", "tiefling")
+//         statFinish()
+//     });
+// }
+
+function statFinish() {
+    document.querySelector(".race-selection").style.display = "none";
+
+    localStorage.setItem("strength-stat", strStat.textContent)
+    localStorage.setItem("strength-modifier", strMod.textContent)
+
+    localStorage.setItem("dexterity-stat", dexStat.textContent)
+    localStorage.setItem("dexterity-modifier", dexMod.textContent)
+
+    localStorage.setItem("constitution-stat", conStat.textContent)
+    localStorage.setItem("constitution-modifier", conMod.textContent)
+
+    localStorage.setItem("intelligence-stat", intStat.textContent)
+    localStorage.setItem("intelligence-modifier", intMod.textContent)
+
+    localStorage.setItem("wisdom-stat", wisStat.textContent)
+    localStorage.setItem("wisdom-modifier", wisMod.textContent)
 
     localStorage.setItem("charisma-stat", chaStat.textContent)
     localStorage.setItem("charisma-modifier", chaMod.textContent)

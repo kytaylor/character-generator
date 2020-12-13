@@ -24,6 +24,31 @@ h1 {
     padding-top: 10px;
 }
 
+p {
+    margin-left: 15px;
+}
+
+h2 {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+h3 {
+    margin-left: 15px;
+}
+
+ul {
+    margin-left: 15px;
+}
+
+li {
+    margin-left: 15px;
+}
+
+ol {
+    margin-left: 15px;
+}
+
 #statBlock {
     font-size: 35px;
     padding: 5px;
@@ -101,27 +126,12 @@ h1 {
     margin-left: 0px;
 }
 
-p {
-    margin-left: 15px;
+.race-block {
+    border: 5px solid black;
+    margin: 15px;
+    display: flex;
 }
 
-h2 {
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-h3 {
-    margin-left: 15px;
-}
-
-ul {
-    margin-left: 15px;
-}
-
-li {
-    margin-left: 15px;
-}
-
-ol {
-    margin-left: 15px;
+.race-button {
+    width: 150px;
 }
