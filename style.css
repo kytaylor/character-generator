@@ -12,7 +12,7 @@ header {
     color: white;
     border-left: 5px solid rgb(201, 127, 250);
     display: flex;
-    /* justify-content: right; */
+    justify-content: space-between;
 }
 
 .header-buttons {

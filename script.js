@@ -554,40 +554,29 @@ function assignCha(x, y) {
 
 // Race buttons and bonuses
 document.getElementById("dragonborn-button").addEventListener("click", function() {
-    chaStat.textContent = parseInt(chaStat.textContent) + 1;
-    var modX = parseInt(chaStat.textContent);
-    chaMod.textContent = modifier(modX)
-
-    strStat.textContent = parseInt(strStat.textContent) + 2;
-    var modY = parseInt(strStat.textContent);
-    strMod.textContent = modifier(modY)
+    raceStrength(2)
+    raceCharisma(1)
 
     localStorage.setItem("race", "dragonborn")
     statFinish()
 });
 
 document.getElementById("dwarf-button").addEventListener("click", function() {
-    conStat.textContent = parseInt(conStat.textContent) + 2;
-    var modX = parseInt(conStat.textContent);
-    conMod.textContent = modifier(modX)
+    raceConstitution(2)
 
     localStorage.setItem("race", "dwarf")
     statFinish()
 });
 
 document.getElementById("elf-button").addEventListener("click", function() {
-    dexStat.textContent = parseInt(dexStat.textContent) + 2;
-    var modX = parseInt(dexStat.textContent);
-    dexMod.textContent = modifier(modX)
+    raceDexterity(2)
 
     localStorage.setItem("race", "elf")
     statFinish()
 });
 
 document.getElementById("gnome-button").addEventListener("click", function() {
-    intStat.textContent = parseInt(intStat.textContent) + 2;
-    var modX = parseInt(intStat.textContent);
-    intMod.textContent = modifier(modX)
+    raceIntelligence(2)
 
     localStorage.setItem("race", "gnome")
     statFinish()
@@ -595,9 +584,7 @@ document.getElementById("gnome-button").addEventListener("click", function() {
 
 document.getElementById("half-elf-button").disabled = true;
 document.getElementById("half-elf-button").addEventListener("click", function() {
-    chaStat.textContent = parseInt(chaStat.textContent) + 2;
-    var modX = parseInt(chaStat.textContent);
-    chaMod.textContent = modifier(modX)
+    raceCharisma(2)
 
     halfElfStats()
     localStorage.setItem("race", "half-elf")
@@ -605,64 +592,35 @@ document.getElementById("half-elf-button").addEventListener("click", function() 
 });
 
 document.getElementById("halfling-button").addEventListener("click", function() {
-    dexStat.textContent = parseInt(dexStat.textContent) + 2;
-    var modX = parseInt(dexStat.textContent);
-    dexMod.textContent = modifier(modX)
+    raceDexterity(2)
 
     localStorage.setItem("race", "halfling")
     statFinish()
 });
 
 document.getElementById("half-orc-button").addEventListener("click", function() {
-    strStat.textContent = parseInt(strStat.textContent) + 2;
-    var modX = parseInt(strStat.textContent);
-    strMod.textContent = modifier(modX)
-
-    conStat.textContent = parseInt(conStat.textContent) + 1;
-    var modY = parseInt(conStat.textContent);
-    conMod.textContent = modifier(modY)
+    raceStrength(2)
+    raceConstitution(1)
 
     localStorage.setItem("race", "half-orc")
     statFinish()
 });
 
 document.getElementById("human-button").addEventListener("click", function() {
-    strStat.textContent = parseInt(strStat.textContent) + 1;
-    var modX = parseInt(strStat.textContent);
-    strMod.textContent = modifier(modX)
-
-    dexStat.textContent = parseInt(dexStat.textContent) + 1;
-    var modX = parseInt(dexStat.textContent);
-    dexMod.textContent = modifier(modX)
-
-    conStat.textContent = parseInt(conStat.textContent) + 1;
-    var modX = parseInt(conStat.textContent);
-    conMod.textContent = modifier(modX)
-
-    intStat.textContent = parseInt(intStat.textContent) + 1;
-    var modX = parseInt(intStat.textContent);
-    intMod.textContent = modifier(modX)
-
-    wisStat.textContent = parseInt(wisStat.textContent) + 1;
-    var modX = parseInt(wisStat.textContent);
-    wisMod.textContent = modifier(modX)
-
-    chaStat.textContent = parseInt(chaStat.textContent) + 1;
-    var modX = parseInt(chaStat.textContent);
-    chaMod.textContent = modifier(modX)
+    raceStrength(1)
+    raceDexterity(1)
+    raceConstitution(1)
+    raceIntelligence(1)
+    raceWisdom(1)
+    raceCharisma(1)
 
     localStorage.setItem("race", "human")
     statFinish()
 });
 
 document.getElementById("tiefling-button").addEventListener("click", function() {
-    chaStat.textContent = parseInt(chaStat.textContent) + 2;
-    var modX = parseInt(chaStat.textContent);
-    chaMod.textContent = modifier(modX)
-
-    intStat.textContent = parseInt(intStat.textContent) + 1;
-    var modY = parseInt(intStat.textContent);
-    intMod.textContent = modifier(modY)
+    raceCharisma(2)
+    raceIntelligence(1)
 
     localStorage.setItem("race", "tiefling")
     statFinish()
@@ -707,3 +665,36 @@ function statFinish() {
     localStorage.setItem("charisma-stat", chaStat.textContent)
     localStorage.setItem("charisma-modifier", chaMod.textContent)
 }
+
+
+function raceStrength(x) {
+    strStat.textContent = parseInt(strStat.textContent) + x;
+    var modX = parseInt(strStat.textContent);
+    strMod.textContent = modifier(modX)
+}
+
+function raceDexterity(x) {
+    dexStat.textContent = parseInt(dexStat.textContent) + x;
+    var modX = parseInt(dexStat.textContent);
+    dexMod.textContent = modifier(modX)
+}
+function raceConstitution(x) {
+    conStat.textContent = parseInt(conStat.textContent) + x;
+    var modX = parseInt(conStat.textContent);
+    conMod.textContent = modifier(modX)
+}
+function raceIntelligence(x) {
+    intStat.textContent = parseInt(intStat.textContent) + x;
+    var modX = parseInt(intStat.textContent);
+    intMod.textContent = modifier(modX)
+}
+function raceWisdom(x) {
+    wisStat.textContent = parseInt(wisStat.textContent) + x;
+    var modX = parseInt(wisStat.textContent);
+    wisMod.textContent = modifier(modX)
+}
+function raceCharisma(x) {
+    chaStat.textContent = parseInt(chaStat.textContent) + x;
+    var modX = parseInt(chaStat.textContent);
+    chaMod.textContent = modifier(modX)
+}    
